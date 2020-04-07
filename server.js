@@ -13,6 +13,8 @@ if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 app.use(cors());
 
+require("./database/connection");
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () =>
