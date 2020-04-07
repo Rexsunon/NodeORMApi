@@ -15,8 +15,12 @@ app.use(cors());
 
 require("./database/connection");
 
+require("./bootstrap")();
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () =>
-  console.log(`Server ${process.env.NODE_ENV} listening on port: ${PORT}`)
+  console.log(
+    `Server running on ${process.env.NODE_ENV} mode and listening on port: ${PORT}`
+  )
 );
